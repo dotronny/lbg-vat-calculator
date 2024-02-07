@@ -1,11 +1,13 @@
 pipeline {
   agent any
-  stages 
+
+  stages {
     stage('Checkout') {
-       // steps {
-         //Get some code from a GitHub repository
-       // git branch: 'main', url: 'https://github.com/dotronny/lbg-vat-calculator.git'
-      //  }
+        steps {
+          // Get some code from a GitHub repository
+          git branch: 'main', url: 'https://github.com/dotronny/lbg-vat-calculator.git'
+        }
+    }
     stage('SonarQube Analysis') {
       environment {
         scannerHome = tool 'sonarqube'
