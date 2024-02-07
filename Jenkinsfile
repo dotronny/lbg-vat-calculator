@@ -2,7 +2,7 @@ pipeline {
   agent any
 
   stages 
-    //stage('Checkout') {
+    stage('Checkout') {
         steps {
          Get some code from a GitHub repository
         git branch: 'main', url: 'https://github.com/dotronny/lbg-vat-calculator.git'
