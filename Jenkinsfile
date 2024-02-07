@@ -3,10 +3,10 @@ pipeline {
 
   stages 
     //stage('Checkout') {
-        //steps {
-         // Get some code from a GitHub repository
-        // git branch: 'main', url: 'YOUR VAT CALCULATOR REPO HERE'
-      //  }
+        steps {
+         Get some code from a GitHub repository
+        git branch: 'main', url: 'https://github.com/dotronny/lbg-vat-calculator.git'
+        }
     stage('SonarQube Analysis') {
       environment {
         scannerHome = tool 'sonarqube'
