@@ -2,11 +2,11 @@ pipeline {
   agent any
 
   stages 
-    stage('Checkout') {
+    //stage('Checkout') {
         //steps {
-          // Get some code from a GitHub repository
-         // git branch: 'main', url: 'YOUR VAT CALCULATOR REPO HERE'
-        //}
+         // Get some code from a GitHub repository
+        // git branch: 'main', url: 'YOUR VAT CALCULATOR REPO HERE'
+      //  }
     stage('SonarQube Analysis') {
       environment {
         scannerHome = tool 'sonarqube'
